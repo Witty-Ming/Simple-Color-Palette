@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Color Palette",
     "author": "WittyMing",
-    "version": (1, 2, 1),
+    "version": (1, 2, 2),
     "blender": (4, 0, 0),
     "location": "Shader Editor > N Panel > Color Palette",
     "description": "Record and drag colors in the material node editor",
@@ -84,7 +84,9 @@ def _stop_hud_if_running():
 
 @persistent
 def _restore_palette_after_load(_dummy):
-    ensure_palette(bpy.context.scene)
+    scene = getattr(bpy.context, "scene", None)
+    if scene is not None:
+        ensure_palette(scene)
 
 
 def _ensure_handlers():
@@ -121,7 +123,9 @@ def register():
         default=ZERO_COLOR,
         update=capture_color_update,
     )
-    ensure_palette(bpy.context.scene)
+    scene = getattr(bpy.context, "scene", None)
+    if scene is not None:
+        ensure_palette(scene)
     _ensure_handlers()
 
 

@@ -1,14 +1,13 @@
 schema_version = "1.0.0"
 id = "wittyming_color_palette"
 name = "Color Palette"
-version = "1.2.1"
+version = "1.2.2"
 tagline = "Record and drag material node colors in the Shader Editor"
 maintainer = "WittyMing"
 type = "add-on"
 website = "https://space.bilibili.com/263206115"
-platforms = ["windows-x64", "macos-x64", "macos-arm64", "linux-x64"]
-tags = ["Node", "Material", "User Interface"]
-blender_version_min = "4.2.0"
+tags = ["Node", "User Interface"]
+blender_version_min = "5.1.0"
 license = ["SPDX:GPL-3.0-or-later"]
 copyright = ["2026 WittyMing"]
 
