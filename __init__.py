@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Color Palette",
     "author": "WittyMing",
-    "version": (1, 2, 2),
+    "version": (1, 2, 3),
     "blender": (4, 0, 0),
     "location": "Shader Editor > N Panel > Color Palette",
     "description": "Record and drag colors in the material node editor",
